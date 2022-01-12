@@ -27,5 +27,12 @@ func Pow(x float64) float64 {
 }
 
 func main() {
-	fmt.Println(Pow(Sqrt(2)))
+	fmt.Println("Введите число:")
+	var num int
+	var _, err = fmt.Scan(&num)
+	if err != nil {
+		fmt.Println("Ошибка ввода: ", err)
+	} else {
+		fmt.Println(Pow(Sqrt(float64(num))))
+	}
 }
